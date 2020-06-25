@@ -93,7 +93,6 @@ function styles() {
 function images() {
     return src(paths.images.src)
     .pipe(newer(paths.images.dest))
-    .pipe(newer(paths.images.destProd))
     .pipe(imagemin())
     .pipe(dest(paths.images.dest))
     .pipe(dest(paths.images.destProd))
